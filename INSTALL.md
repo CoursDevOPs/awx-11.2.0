@@ -84,14 +84,16 @@ Before you can run a deployment, you'll need the following installed in your loc
 - [NPM 6.x LTS](https://docs.npmjs.com/)
 - Python 3.6+
 
-### Install a dedicated virutalenv
+### Install a dedicated virtualenv
 
 ```shell script
-   yum -y install python3-virtualenv  # install selinux package for python3
-   yum -y install python-virtualenv   # install selinux package for python2
-   yum -y install libselinux-python3  # install bindings selinux with python3
+   deactivate 
+   sudo yum -y install python3-virtualenv  # install selinux package for python3
+   sudo yum -y install python-virtualenv   # install selinux package for python2
+   sudo yum -y install libselinux-python3  # install bindings selinux with python3
+   cd /awx-11.2.0
    virtualenv --system-site-packages awx # virtual on system-packages not local to the directory
-   source venv/bin/activate  # activate the virtual env 
+   source awx/bin/activate  # activate the virtual env 
    sudo pip3 install wheel   # install wheel permissions
    sudo pip3 install ansible
    sudo pip3 install docker
