@@ -90,7 +90,7 @@ Before you can run a deployment, you'll need the following installed in your loc
    yum -y install python3-virtualenv  # install selinux package for python3
    yum -y install python-virtualenv   # install selinux package for python2
    yum -y install libselinux-python3  # install bindings selinux with python3
-   virtualenv --system-site-packages venv # virtual on system-packages not local to the directory
+   virtualenv --system-site-packages awx # virtual on system-packages not local to the directory
    source venv/bin/activate  # activate the virtual env 
    sudo pip3 install wheel   # install wheel permissions
    sudo pip3 install ansible
